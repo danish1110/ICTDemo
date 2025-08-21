@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <hr color="orange" size="10" />
+    <h1 align="center"> EJS Demo Page 2</h1>
+    <hr color="green" size="10" />
+
+
+    <div>
+      <% fruitNames.forEach((fruit)=>{ %>
+        <h3>
+          <%= fruit %>
+        </h3>
+
+        <% }) %>
+    </div>
+
+
+    <div>
+
+      <% for(let count=1;count<=5;count++) { %>
+        <h4> Value <%= count%>
+        </h4>
+
+        <% } %>
+
+
+          <ul>
+            <% let count=1 %>
+              <% while(count<=10) { %>
+                <li>
+                  <%= count*10 %>
+                </li>
+
+                <% count++ %>
+                  <% } %>
+
+          </ul>
+    </div>
+
+    <div>
+      <% let name='Shane Warne' %>
+        Welcome <%= name %>
+
+          <% let isValid=false %>
+            <% if(isValid) { %>
+              <h3> User Is Valid </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, aliquid dolore? Facere voluptatibus vitae
+                minima illum saepe et debitis, facilis, possimus labore exercitationem hic obcaecati quasi atque, ex
+                repudiandae dolor!
+              </p>
+
+              <% } else { %>
+                <h4 style="color: red;">User is Invalid</h4>
+
+                <% } %>
+    </div>
+
+
+
+
+
+  </body>
+
+</html>

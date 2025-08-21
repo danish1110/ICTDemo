@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/stylesheet/myStyle.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <hr color="orange" size="10" />
+    <h1 align="center"> EJS Demo Page 3</h1>
+    <hr color="green" size="10" />
+
+    <img src="/images/python.png" />
+
+
+    <table border="2px" align="center" width="400px">
+      <thead>
+        <tr>
+          <th> User ID </th>
+          <th> User Name </th>
+          <th> User Age </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% userData.forEach((user)=>{ %>
+
+          <tr>
+            <td>
+              <%= user.uid %>
+            </td>
+            <td>
+              <%= user.uname %>
+            </td>
+            <td>
+              <%= user.age %>
+            </td>
+          </tr>
+
+
+          <% }) %>
+
+
+
+
+      </tbody>
+    </table>
+
+
+
+
+
+
+  </body>
+
+</html>

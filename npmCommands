@@ -1,0 +1,71 @@
+
+app.methodName(route , handler(request,response)=>{ })
+
+
+npm install -g =>Install the package globally
+
+npm install -save => Adds the package to the projects dependency
+
+npm install -save-exact => Adds the exact package version to the projects dependency
+
+
+npm install -save-dev => Adds the package to the projects dependency(use only in development)
+
+
+npm install -force => force npm to fetch and install
+
+1.1) npm install  nodemon
+1.2) npm i nodemon 
+
+
+2.1)npm uninstall nodemon
+2.2)npm u nodemon
+
+---------------------------------------------
+
+a) npm i ejs -save
+b) app.set('view engine','ejs') in index.js file
+c) create views folder in Application
+d) Save each design page into views folder with '.ejs' extension
+
+  ejs Syntax
+------------------  
+<%= variableName %>   => renders the value of variable inside ejs page
+
+<%- variableName %>   => Output raw HTML
+
+<%  %> => Used for Javascript(if-else, loops , variable decleration)
+
+
+------------------------------------------------------------------
+a) npm i express-formidable -save
+b) Import into index.js file
+   const formidable = require('express-formidable')
+c) app.use(formidable())  
+d) request.fields
+   {
+    unm: 'Sachin',
+    pwd: 'Hp@123',
+    mailId: 'sachin@gmail.com',
+    regBtn: 'Register'
+   }
+
+------------------------------------------
+Database Connectivity
+a) INstall mongoose
+   npm i mongoose
+b) Create new file named as dbConn.js and write
+    let mongoose = require('mongoose')
+    const mongoURI = 'mongodb://localhost:27017/ICT_Online'
+
+    mongoose.connect(mongoURI).then(() => {
+      console.log("Mongo DB Connected...");
+    }).catch((err) => {
+      console.log("MongoDB Connection Failed ", err);
+
+    })
+
+    module.exports = mongoose
+
+c) Import dbConn.js into index.js
+    

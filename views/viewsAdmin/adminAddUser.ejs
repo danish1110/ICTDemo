@@ -1,0 +1,49 @@
+<%- include('../partials/myHeader.ejs') %>
+  <%- include('./adminNav.ejs') %>
+
+
+    <section>
+      <form method="post">
+        <table class="table table-bordered table-info w-50 mx-auto mt-5">
+          <thead>
+            <tr>
+              <th colspan="2">
+                Registration Form
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>User Name</td>
+              <td><input type="text" name="unm" /> </td>
+            </tr>
+
+            <tr>
+              <td>Password</td>
+              <td><input type="password" name="pwd" /> </td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td><input type="email" name="mailId" /> </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center"><input type="submit" name="regBtn" value="Register"
+                  class="btn btn-primary" /> </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <% if(success) { %>
+          <p class="alert alert-success w-50 mx-auto">
+            <%= message %>
+          </p>
+
+          <% } %>
+
+
+      </form>
+
+    </section>
+
+
+    <%- include('../partials/myFooter.ejs') %>

@@ -1,0 +1,46 @@
+<%- include('../partials/myHeader') %>
+  <%- include('./adminNav') %>
+
+    <section>
+      <div class="container mt-3">
+        <table class="table table-bordered table-striped text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>User Name</th>
+              <th>Password</th>
+              <th>Email ID</th>
+              <th>User Role</th>
+              <th>Active</th>
+              <th>Edit Record</th>
+              <th>Delete Record</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% allUsers.forEach((user)=>{ %>
+              <tr>
+                <td>
+                  <%= user.userName %>
+                </td>
+                <td>
+                  <%= user.userPwd %>
+                </td>
+                <td>
+                  <%= user.userEmail %>
+                </td>
+                <td>
+                  <%= user.userRole %>
+                </td>
+                <td>
+                  <%= user.isActive %>
+                </td>
+                <td><a href="editAll/<%= user._id %>" class="btn btn-sm btn-outline-primary">Edit</a></td>
+                <td><a href="delete/<%= user._id %>" class="btn btn-sm btn-danger">Delete</a></td>
+              </tr>
+              <% }) %>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <%- include('../partials/myFooter') %>
