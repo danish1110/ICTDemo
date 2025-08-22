@@ -7,11 +7,12 @@ const session = require('express-session')
 const jwt = require("jsonwebtoken");
 const { verifyToken, SECRET_KEY } = require('./middleware/auth')
 const { StudentModel } = require('./models/userModal')
+require('dotenv').config();
 
 const db = require('./dbConn')
 const app = express()
 const HOST = 'localhost'
-const PORT = '8000'
+const PORT = process.env.PORT || '8000'
 
 app.use(cors())
 app.set('view engine', 'ejs')
